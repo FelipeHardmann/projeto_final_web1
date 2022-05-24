@@ -1,0 +1,1 @@
+var choiceSingle = document.querySelector('.btn')

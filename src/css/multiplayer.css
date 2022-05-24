@@ -1,0 +1,76 @@
+body{
+    background: linear-gradient(to right, rgb(93, 2, 146), rgb(255, 255, 255))
+}
+
+.h1Single{
+    display: flex;
+    justify-content: center;
+    color: #250966;
+}
+
+.h2Choose{
+    margin-top: 130px;
+    display: flex;
+    justify-content: center;
+    color: #250966;
+}
+h3{
+    display: flex;
+    justify-content: center;
+    color: #250966;
+}
+
+.pagSingle{
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+}
+
+.machine{
+    margin: 15px;
+    padding-left: 280px;
+}
+
+.chooseNum{
+    margin: 15px;
+}
+
+
+input{
+    background-color: blueviolet;
+    box-shadow: #250966 4px 4px 0px;
+    border-radius: 8px;
+    transition: transform 200ms, box-shadow 200ms;
+    width: 100px;
+    height: 40px;
+    margin: 4px;
+}
+
+input:active{
+    transform: translateY(4px) translateX(4px);
+    box-shadow: #250966 0px 0px 0px;
+}
+
+
+a{
+    padding-left: 30px;
+}
+
+button{
+    background-color: blueviolet;
+    box-shadow: #250966 4px 4px 0px;
+    border-radius: 100px;
+    transition: transform 200ms, box-shadow 200ms;
+    width: 60px;
+    height: 40px;
+}
+
+
+button:active{
+    transform: translateY(4px) translateX(4px);
+    box-shadow: #250966 0px 0px 0px;
+}
+
+
+
+
