@@ -42,10 +42,7 @@ player1Num1.addEventListener('click', () => {
     player2Num1.setAttribute('value', `${valueChoiced1Player2 += 1}`)
     player2Num2.setAttribute('value', `${valueChoiced2Player2 += 1}`)
     player2Num3.setAttribute('value', `${valueChoiced3Player2 += 1}`)
-    /*wrapperMainNumber.innerHTML = `${mainNumber += 1}`
-    wrapperMainNumber.style.fontSize = '70pt'
-    isTurnPlayer1 = true
-    verifyMainNumber(mainNumber)*/
+    
 
 })
 
@@ -65,10 +62,7 @@ numChoicedPlay2.addEventListener('click', () => {
     player2Num1.setAttribute('value', `${valueChoiced1Player2 += 2}`)
     player2Num2.setAttribute('value', `${valueChoiced2Player2 += 2}`)
     player2Num3.setAttribute('value', `${valueChoiced3Player2 += 2}`)
-    /*wrapperMainNumber.innerHTML = `${mainNumber += 2}`
-    wrapperMainNumber.style.fontSize = '70pt'
-    isTurnPlayer1 = true
-    verifyMainNumber(mainNumber)*/
+    
 })
 
 numChoicedPlay3.addEventListener('click', () => {
@@ -87,11 +81,10 @@ numChoicedPlay3.addEventListener('click', () => {
     player2Num1.setAttribute('value', `${valueChoiced1Player2 += 2}`)
     player2Num2.setAttribute('value', `${valueChoiced2Player2 += 2}`)
     player2Num3.setAttribute('value', `${valueChoiced3Player2 += 2}`)
-    /*wrapperMainNumber.innerHTML = `${mainNumber += 3}`
-    wrapperMainNumber.style.fontSize = '70pt'
-    isTurnPlayer1 = true
-    verifyMainNumber(mainNumber)*/
+    
 })
+
+
 
 
 
