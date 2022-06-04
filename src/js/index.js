@@ -1,1 +1,1 @@
-var choiceSingle = document.querySelector('.btn')
+//Será usado para tudo
