@@ -1,0 +1,40 @@
+body{
+    background: linear-gradient(to right, rgb(93, 2, 146), rgb(255, 255, 255))
+}
+
+
+#sec1{
+    display: flex;
+    justify-content: center;
+    color: #250966;
+}
+
+#sec2{
+    padding-top:100px;
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 300px;
+    height: 300px;
+}
+
+.container{
+    text-align: center;
+    padding-top: 80px;
+}   
+
+input{
+    margin: 15px;
+    height: 20px;
+    width: 240px;
+    border-radius: 7px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border: 10px;
+    color: #250966; 
+}
+
+
+
