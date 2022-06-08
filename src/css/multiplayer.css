@@ -73,4 +73,29 @@ button:active{
 
 
 
+/*section 2*/
+
+#sec2{
+    display: none;
+    justify-content: center;
+    color: #250966;
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 500px;
+    height: 200px;
+}
+
+.container{
+    text-align: center;
+    padding-top: 80px;
+} 
+
+p{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+}
+
 

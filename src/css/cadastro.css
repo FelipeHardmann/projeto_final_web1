@@ -26,6 +26,13 @@ body{
     padding-top: 80px;
 }   
 
+
+.btn{
+    padding-top: 90px;
+    padding-left: 70px;
+}
+
+
 input{
     margin: 15px;
     height: 20px;
@@ -36,5 +43,19 @@ input{
     color: #250966; 
 }
 
+
+button{
+    background-color: blueviolet;
+    box-shadow: #250966 4px 4px 0px;
+    border-radius: 100px;
+    transition: transform 200ms, box-shadow 200ms;
+    width: 60px;
+    height: 40px;
+}
+
+button:active{
+    transform: translateY(4px) translateX(4px);
+    box-shadow: #250966 0px 0px 0px;
+}
 
 
