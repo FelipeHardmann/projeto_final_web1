@@ -21,13 +21,20 @@ var value2Machine = Number(machine2.value)
 var machine3 = document.querySelector('.machine3')
 var value3Machine = Number(machine3.value)
 
+
+//Variável de Número principal 
 var mainNumber = 0
 
-var valueMachineA
-var valueMin = Math.ceil(1)
-var valueMax = Math.floor(3)
+
+
 
 //fuctions
+function machineRandom(){
+    var valueMin = Math.ceil(1)
+    var valueMax = Math.floor(3)
+    return Math.floor(Math.random() * (valueMax - valueMin + 1)) + valueMin
+}
+
 function offButtonPlayer (){
     player1N1.disabled = true
     player1N2.disabled = true
@@ -50,6 +57,8 @@ function onButtonMachine (){
     machine1.disabled = false
     machine2.disabled = false
     machine3.disabled = false
+
+    
 }
 
 function addButtons(){
@@ -109,13 +118,13 @@ function verifyNumber21(){
     }
 }
 
-/*function maquina (valueMachineA){
-    return Math.floor(Math.random()* (valueMax - valueMin + 1)) + valueMin
-}*/
 
 
 
-//Buttons
+
+
+
+//Buttons fuctions clicks
 player1N1.onclick = function(){
 
     addButtons()
@@ -139,28 +148,5 @@ player1N3.onclick = function(){
     onButtonMachine()
 }
 
-machine1.onclick = function(){
 
-    addButtons()
-    offButtonMachine()
-    onButtonPlayer()
-    valueMachineA()
-    
-}
-
-machine2.onclick = function(){
-
-    addButtons2()
-    offButtonMachine()
-    onButtonPlayer()
-
-}
-
-machine3.onclick = function(){
-
-    addButtons3()
-    offButtonMachine()
-    onButtonPlayer()
-
-}
 
