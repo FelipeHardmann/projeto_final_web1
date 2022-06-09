@@ -23,6 +23,10 @@ var value3Machine = Number(machine3.value)
 
 var mainNumber = 0
 
+var valueMachineA
+var valueMin = Math.ceil(1)
+var valueMax = Math.floor(3)
+
 //fuctions
 function offButtonPlayer (){
     player1N1.disabled = true
@@ -58,6 +62,7 @@ function addButtons(){
     machine3.setAttribute('value', `${value3Machine += 1}`)
 
     mainNumber += 1
+    verifyNumber21(mainNumber)
 }
 
 
@@ -71,6 +76,7 @@ function addButtons2(){
     machine3.setAttribute('value', `${value3Machine += 2}`)
 
     mainNumber += 2
+    verifyNumber21(mainNumber)
 }
 
 
@@ -84,26 +90,32 @@ function addButtons3(){
     machine3.setAttribute('value', `${value3Machine += 3}`)
 
     mainNumber += 3
+    verifyNumber21(mainNumber)
 }
 
 function verifyNumber21(){
     if(mainNumber === 21) {
         numeroPrincipal = 0
 
-        player1N1.setAttribute('value', `${valueChoiced1Player1 = 1}`)
-        player1N2.setAttribute('value', `${valueChoiced2Player1 = 2}`)
-        player1N3.setAttribute('value', `${valueChoiced3Player1 = 3}`)
+        player1N1.setAttribute('value', `${valueChoiced1 = 1}`)
+        player1N2.setAttribute('value', `${valueChoiced2 = 2}`)
+        player1N3.setAttribute('value', `${valueChoiced3 = 3}`)
         
-        machine1.setAttribute('value', `${valueChoiced1Player2 = 1}`)
-        machine2.setAttribute('value', `${valueChoiced2Player2 = 2}`)
-        machine3.setAttribute('value', `${valueChoiced3Player2 = 3}`)
+        machine1.setAttribute('value', `${value1Machine = 1}`)
+        machine2.setAttribute('value', `${value2Machine = 2}`)
+        machine3.setAttribute('value', `${value3Machine = 3}`)
     }else{
 
     }
 }
 
+/*function maquina (valueMachineA){
+    return Math.floor(Math.random()* (valueMax - valueMin + 1)) + valueMin
+}*/
 
 
+
+//Buttons
 player1N1.onclick = function(){
 
     addButtons()
@@ -132,6 +144,7 @@ machine1.onclick = function(){
     addButtons()
     offButtonMachine()
     onButtonPlayer()
+    valueMachineA()
     
 }
 
@@ -150,3 +163,4 @@ machine3.onclick = function(){
     onButtonPlayer()
 
 }
+
