@@ -31,7 +31,7 @@ var mainNumber = 0
 //fuctions
 function machineRandom(){
     var valueMin = Math.ceil(1)
-    var valueMax = Math.floor(3)
+    var valueMax = Math.floor(3)  
     return Math.floor(Math.random() * (valueMax - valueMin + 1)) + valueMin
 }
 
@@ -105,6 +105,17 @@ function addButtons3(){
 function verifyNumber21(){
     if(mainNumber === 21) {
         numeroPrincipal = 0
+        
+        player1N1.setAttribute('value', `${valueChoiced1 = 1}`)
+        player1N2.setAttribute('value', `${valueChoiced2 = 2}`)
+        player1N3.setAttribute('value', `${valueChoiced3 = 3}`)
+        
+        machine1.setAttribute('value', `${value1Machine = 1}`)
+        machine2.setAttribute('value', `${value2Machine = 2}`)
+        machine3.setAttribute('value', `${value3Machine = 3}`)
+    }else if (mainNumber > 21){
+        
+        numeroPrincipal = 0
 
         player1N1.setAttribute('value', `${valueChoiced1 = 1}`)
         player1N2.setAttribute('value', `${valueChoiced2 = 2}`)
@@ -116,10 +127,38 @@ function verifyNumber21(){
     }else{
 
     }
+            
 }
 
 
+function verifyWinner(){
+    if(player1N1 === 21 || player1N2 === 21 || player1N3 === 21){
+        alert('Jogador Ganhou')
+    }else if (machine1 === 21 || machine2 === 21 || machine3 === 21){
+        alert('Máquina venceu')
+    }
+}
 
+function machinePlay(){
+    setTimeout(()=> {
+        var machineValue = machineRandom()
+    
+        mainNumber += machineValue
+
+        player1N1.setAttribute('value', `${valueChoiced1 += machineValue}`)
+        player1N2.setAttribute('value', `${valueChoiced2 += machineValue}`)
+        player1N3.setAttribute('value', `${valueChoiced3 += machineValue}`)
+
+        machine1.setAttribute('value', `${value1Machine += machineValue}`)
+        machine2.setAttribute('value', `${value2Machine += machineValue}`)
+        machine3.setAttribute('value', `${value3Machine += machineValue}`)
+        verifyNumber21()
+        verifyWinner()
+
+        onButtonPlayer()
+        }, 2000)
+
+}
 
 
 
@@ -130,6 +169,9 @@ player1N1.onclick = function(){
     addButtons()
     offButtonPlayer()
     onButtonMachine()
+    machinePlay()
+    verifyWinner()
+    verifyNumber21()
 
 }
 
@@ -138,7 +180,10 @@ player1N2.onclick = function(){
     addButtons2()
     offButtonPlayer()
     onButtonMachine()
-
+    machinePlay()
+    verifyWinner()
+    verifyNumber21()
+    
 }
 
 player1N3.onclick = function(){
@@ -146,7 +191,7 @@ player1N3.onclick = function(){
     addButtons3()
     offButtonPlayer()
     onButtonMachine()
+    machinePlay()
+    verifyWinner()
+    verifyNumber21()
 }
-
-
-

@@ -1,12 +1,16 @@
 //Variáveis
-var inputPlayer = document.getElementsByClassName('.name')
-var buttonPlay = document.getElementsByClassName('btnAvanced')
+var inputPlayer = document.querySelector('.name1')
+var inputPlayer2 = document.querySelector('.name2')
+var buttonPlay = document.querySelector('.btnAvanced')
 
-
+//LocalStorage
+localStorage.setItem(inputPlayer, inputPlayer.value)
+let name = localStorage.getItem(inputPlayer)
 
 //Fuctions
 
-function verifyGit(){
+
+/*function verifyGit(){
     axios.get(`https://api.github.com/users/${inputPlayer.value}`)
 .then(res =>{
     
@@ -17,11 +21,21 @@ function verifyGit(){
     alert(`O GitHub ${inputPlayer.value} não existe!`);
 })
 }
+*/
 
+    buttonPlay.onclick = function() {
+        var url = "/html/Multiplayer.html"
+            axios.get(`https://api.github.com/users/${inputPlayer.value}`)
+        .then(res =>{
+            window.open(url)
+            window.focus
+        })
+        .catch(() => {
+            alert(`O GitHub ${inputPlayer.value} não existe!`);
+        })
+    }
+        
 
-buttonPlay.onclick = function(){
-    verifyGit()
-}
 
 
 //Função de abir nova aba
