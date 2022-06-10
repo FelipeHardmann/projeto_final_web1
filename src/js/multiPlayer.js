@@ -32,6 +32,7 @@ var numeroPrincipal = 0
 var sectionWinner = document.querySelector('#sec2')
 
 //Criando funções
+//Funções ativar e desativar
 function desligarBut1 (){
     player1Num1.disabled = true
     player1Num2.disabled = true
@@ -56,7 +57,7 @@ function ativarBut2 (){
     player2Num3.disabled = false
 }
 
-
+//funções de somar
 function somarButtons(){
     player1Num1.setAttribute('value', `${valueChoiced1Player1 += 1}`)
     player1Num2.setAttribute('value', `${valueChoiced2Player1 += 1}`)
@@ -93,7 +94,7 @@ function somarButtons3() {
 }
 
 
-
+//função de verificar número principal e resetar os valores
 function verificarIs21() {
   
     console.log(numeroPrincipal)
@@ -114,7 +115,7 @@ function verificarIs21() {
     }
 }
 
-
+//funções de click
 player1Num1.onclick = function(){
     
     somarButtons()
@@ -164,17 +165,4 @@ player2Num3.onclick = function(){
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//funções para names player1 e player2

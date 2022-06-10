@@ -1,6 +1,10 @@
 //Página Principal
 var pagSingle = document.querySelector('.pagSingle')
 
+var cardWinner = document.querySelector('.card')
+var h1Player = document.querySelector('.h1Cong')
+var h1Machine = document.querySelector('.inputNamePlayer')
+
 //Variáveis Player
 var player1N1 = document.querySelector('.num1')
 var valueChoiced1 = Number(player1N1.value)
@@ -104,6 +108,9 @@ function addButtons3(){
 
 function verifyNumber21(){
     if(mainNumber === 21) {
+        cardWinner.style.display = "flex"
+        h1Player.style.display = "flex"
+        h1Machine.style.display = "flex"
         numeroPrincipal = 0
         
         player1N1.setAttribute('value', `${valueChoiced1 = 1}`)
@@ -130,14 +137,15 @@ function verifyNumber21(){
             
 }
 
-
+//função verificar quem é o vencedor
 function verifyWinner(){
-    if(player1N1 === 21 || player1N2 === 21 || player1N3 === 21){
-        alert('Jogador Ganhou')
-    }else if (machine1 === 21 || machine2 === 21 || machine3 === 21){
-        alert('Máquina venceu')
+    if(valueChoiced1 === 21 || valueChoiced2 === 21 || valueChoiced3 === 21){
+        
     }
 }
+
+
+
 
 function machinePlay(){
     setTimeout(()=> {
@@ -153,7 +161,6 @@ function machinePlay(){
         machine2.setAttribute('value', `${value2Machine += machineValue}`)
         machine3.setAttribute('value', `${value3Machine += machineValue}`)
         verifyNumber21()
-        verifyWinner()
 
         onButtonPlayer()
         }, 2000)
@@ -169,8 +176,7 @@ player1N1.onclick = function(){
     addButtons()
     offButtonPlayer()
     onButtonMachine()
-    machinePlay()
-    verifyWinner()
+    machinePlay()    
     verifyNumber21()
 
 }
@@ -181,7 +187,6 @@ player1N2.onclick = function(){
     offButtonPlayer()
     onButtonMachine()
     machinePlay()
-    verifyWinner()
     verifyNumber21()
     
 }
@@ -191,7 +196,6 @@ player1N3.onclick = function(){
     addButtons3()
     offButtonPlayer()
     onButtonMachine()
-    machinePlay()
-    verifyWinner()
+    machinePlay()    
     verifyNumber21()
 }

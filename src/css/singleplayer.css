@@ -66,9 +66,30 @@ button:active{
 }
 
 
+/*sec2*/
+#sec2{
+    display: flex;
+    justify-content: center;
+    color: #250966;
+}
+
+.card{
+    display: none;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 500px;
+    height: 170px;
+}
+
+.container{
+    text-align: center;
+} 
 
 
+.h1Cong{
+    display: none;
+}
 
-
-
-
+.inputNamePlayer{
+    display: none;
+}
