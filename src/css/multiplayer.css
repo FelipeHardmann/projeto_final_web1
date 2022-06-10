@@ -71,7 +71,15 @@ button:active{
     box-shadow: #250966 0px 0px 0px;
 }
 
-
+/*H1 de nomes de player*/
+.playerName1{
+    display: none;
+    color: #250966;
+}
+.playerName2{
+    display: none;
+    color: #250966;
+}
 
 /*section 2*/
 
