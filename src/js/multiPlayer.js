@@ -1,3 +1,5 @@
+
+import  "./cadastro" 
 //main
 var pagSingle = document.querySelector('.pagSingle')
 
@@ -99,6 +101,8 @@ function verificarIs21() {
   
     console.log(numeroPrincipal)
     if(numeroPrincipal === 21) {
+        if (player1Num1.disabled === true) {
+            sectionWinner.innerHTML = `Parabéns, o ${var1} venceu`
         sectionWinner.style.display = "flex"
         numeroPrincipal = 0
         
@@ -109,9 +113,20 @@ function verificarIs21() {
         player2Num1.setAttribute('value', `${valueChoiced1Player2 = 1}`)
         player2Num2.setAttribute('value', `${valueChoiced2Player2 = 2}`)
         player2Num3.setAttribute('value', `${valueChoiced3Player2 = 3}`)
-    }
-    else {
-
+        } else {
+            sectionWinner.innerHTML = `Parabéns, o ${var2} venceu`
+        sectionWinner.style.display = "flex"
+        numeroPrincipal = 0
+        
+        player1Num1.setAttribute('value', `${valueChoiced1Player1 = 1}`)
+        player1Num2.setAttribute('value', `${valueChoiced2Player1 = 2}`)
+        player1Num3.setAttribute('value', `${valueChoiced3Player1 = 3}`)
+        
+        player2Num1.setAttribute('value', `${valueChoiced1Player2 = 1}`)
+        player2Num2.setAttribute('value', `${valueChoiced2Player2 = 2}`)
+        player2Num3.setAttribute('value', `${valueChoiced3Player2 = 3}`)
+        }
+        
     }
 }
 

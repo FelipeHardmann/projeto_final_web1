@@ -10,12 +10,15 @@ var namePlayer1 = localStorage.getItem('inputPlayer')
 localStorage.setItem('inputPlayer2', inputPlayer2.value)
 var namePlayer2 = localStorage.getItem('inputPlayer2')
 var url = "/html/Multiplayer.html"
+
+export var nomeJogador1
+export var nomeJogador2
 //Fuctions
 
 function responseNamePlayer2() {
     axios.get(`https://api.github.com/users/${inputPlayer2.value}`)
     .then((res) => {
-        console.log(res);
+        localStorage.setItem("jogador2", res.data.login)
         window.open(url)
         window.focus
     })
@@ -29,7 +32,8 @@ function responseNamePlayer2() {
         
             axios.get(`https://api.github.com/users/${inputPlayer.value}`)
         .then(res =>{
-            console.log(res);
+            localStorage.setItem("jogador1", res.data.login)
+            
             responseNamePlayer2() 
         })
         .catch(() => {
@@ -37,5 +41,11 @@ function responseNamePlayer2() {
             
         })
 
-          
+            nomeJogador1 = localStorage.getItem("jogador1")
+            nomeJogador2 = localStorage.getItem("jogador2")
+    }
+
+    export default {
+        nomeJogador1,
+        nomeJogador2
     }
